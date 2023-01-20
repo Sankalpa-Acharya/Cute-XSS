@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cute XSS</title>
+</head>
+<body>
+    <h1>Cute XSS 🙌</h1>
+    <ul>
+        <li>I'm Glad that you are playing this.</li>
+        <li>DM if you solve <a href="https://twitter.com/sankalpa_02">@sankalpa_02</a></li>
+        <li>Good luck 😊</li>
+    </ul>
+    <div id="bois">
+
+    </div>
+</body>
+
+
+<script>
+var cyber = new URL(location).searchParams.get('can') || '{"name":"sankalpa"}';
+var yup = JSON.parse(cyber);
+sec = ''
+</script>
+
+<script>
+var para = new URL(location).searchParams.get('wish') || '<b></b>';
+document.getElementById('bois').innerHTML = para;
+eval(sec.name);
+</script>
+
+</html>
